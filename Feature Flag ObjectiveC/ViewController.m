@@ -14,9 +14,20 @@
 
 @implementation ViewController
 
+bool isHoliday = false;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    if (isHoliday)
+    {
+        _greetingLabel.text = @"Happy Holidays!";
+    }
+    else
+    {
+        _greetingLabel.text = @"Hello, World!";
+    }
 }
 
 
