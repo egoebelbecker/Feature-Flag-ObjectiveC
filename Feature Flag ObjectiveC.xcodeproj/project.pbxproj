@@ -13,7 +13,44 @@
 		53AE844020C6164F007D9421 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53AE843F20C6164F007D9421 /* Assets.xcassets */; };
 		53AE844320C6164F007D9421 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53AE844120C6164F007D9421 /* LaunchScreen.storyboard */; };
 		53AE844620C6164F007D9421 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 53AE844520C6164F007D9421 /* main.m */; };
+		53AE844D20CB316C007D9421 /* featureflag.plist in Resources */ = {isa = PBXBuildFile; fileRef = 53AE844C20CB316C007D9421 /* featureflag.plist */; };
+		53AE845720CB4D22007D9421 /* ROXCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 53AE844E20CB4CE1007D9421 /* ROXCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		53AE845820CB4D22007D9421 /* ROX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53AE845420CB4CE2007D9421 /* ROX.framework */; };
+		53AE845920CB4D22007D9421 /* ROX.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 53AE845420CB4CE2007D9421 /* ROX.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		53AE845E20CB56F4007D9421 /* MyContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 53AE845D20CB56F4007D9421 /* MyContainer.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		53AE845320CB4CE2007D9421 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 53AE844F20CB4CE1007D9421 /* RoxSdk.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 340E71371EFAB27000A2C48E;
+			remoteInfo = RoxSdk;
+		};
+		53AE845A20CB4D22007D9421 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 53AE844F20CB4CE1007D9421 /* RoxSdk.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 340E71361EFAB27000A2C48E;
+			remoteInfo = RoxSdk;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		53AE845C20CB4D22007D9421 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				53AE845920CB4D22007D9421 /* ROX.framework in Embed Frameworks */,
+				53AE845720CB4D22007D9421 /* ROXCore.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		53AE843320C6164D007D9421 /* Feature Flag ObjectiveC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Feature Flag ObjectiveC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -26,6 +63,11 @@
 		53AE844220C6164F007D9421 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		53AE844420C6164F007D9421 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		53AE844520C6164F007D9421 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		53AE844C20CB316C007D9421 /* featureflag.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = featureflag.plist; sourceTree = "<group>"; };
+		53AE844E20CB4CE1007D9421 /* ROXCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ROXCore.framework; path = rox/RoxSdk/ROXCore.framework; sourceTree = "<group>"; };
+		53AE844F20CB4CE1007D9421 /* RoxSdk.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RoxSdk.xcodeproj; path = rox/RoxSdk/RoxSdk.xcodeproj; sourceTree = "<group>"; };
+		53AE845D20CB56F4007D9421 /* MyContainer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyContainer.m; sourceTree = "<group>"; };
+		53AE845F20CB571F007D9421 /* MyContainer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyContainer.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53AE845820CB4D22007D9421 /* ROX.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +85,8 @@
 		53AE842A20C6164D007D9421 = {
 			isa = PBXGroup;
 			children = (
+				53AE844E20CB4CE1007D9421 /* ROXCore.framework */,
+				53AE844F20CB4CE1007D9421 /* RoxSdk.xcodeproj */,
 				53AE843520C6164D007D9421 /* Feature Flag ObjectiveC */,
 				53AE843420C6164D007D9421 /* Products */,
 			);
@@ -62,13 +107,24 @@
 				53AE843720C6164D007D9421 /* AppDelegate.m */,
 				53AE843920C6164D007D9421 /* ViewController.h */,
 				53AE843A20C6164D007D9421 /* ViewController.m */,
+				53AE845F20CB571F007D9421 /* MyContainer.h */,
+				53AE845D20CB56F4007D9421 /* MyContainer.m */,
 				53AE843C20C6164D007D9421 /* Main.storyboard */,
 				53AE843F20C6164F007D9421 /* Assets.xcassets */,
 				53AE844120C6164F007D9421 /* LaunchScreen.storyboard */,
 				53AE844420C6164F007D9421 /* Info.plist */,
 				53AE844520C6164F007D9421 /* main.m */,
+				53AE844C20CB316C007D9421 /* featureflag.plist */,
 			);
 			path = "Feature Flag ObjectiveC";
+			sourceTree = "<group>";
+		};
+		53AE845020CB4CE1007D9421 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				53AE845420CB4CE2007D9421 /* ROX.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -81,10 +137,12 @@
 				53AE842F20C6164D007D9421 /* Sources */,
 				53AE843020C6164D007D9421 /* Frameworks */,
 				53AE843120C6164D007D9421 /* Resources */,
+				53AE845C20CB4D22007D9421 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				53AE845B20CB4D22007D9421 /* PBXTargetDependency */,
 			);
 			name = "Feature Flag ObjectiveC";
 			productName = "Feature Flag ObjectiveC";
@@ -116,6 +174,12 @@
 			mainGroup = 53AE842A20C6164D007D9421;
 			productRefGroup = 53AE843420C6164D007D9421 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 53AE845020CB4CE1007D9421 /* Products */;
+					ProjectRef = 53AE844F20CB4CE1007D9421 /* RoxSdk.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				53AE843220C6164D007D9421 /* Feature Flag ObjectiveC */,
@@ -123,12 +187,23 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		53AE845420CB4CE2007D9421 /* ROX.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ROX.framework;
+			remoteRef = 53AE845320CB4CE2007D9421 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		53AE843120C6164D007D9421 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				53AE844320C6164F007D9421 /* LaunchScreen.storyboard in Resources */,
+				53AE844D20CB316C007D9421 /* featureflag.plist in Resources */,
 				53AE844020C6164F007D9421 /* Assets.xcassets in Resources */,
 				53AE843E20C6164D007D9421 /* Main.storyboard in Resources */,
 			);
@@ -142,12 +217,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				53AE843B20C6164D007D9421 /* ViewController.m in Sources */,
+				53AE845E20CB56F4007D9421 /* MyContainer.m in Sources */,
 				53AE844620C6164F007D9421 /* main.m in Sources */,
 				53AE843820C6164D007D9421 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		53AE845B20CB4D22007D9421 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RoxSdk;
+			targetProxy = 53AE845A20CB4D22007D9421 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		53AE843C20C6164D007D9421 /* Main.storyboard */ = {
@@ -282,8 +366,13 @@
 		53AE844A20C6164F007D9421 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/rox/RoxSdk",
+				);
 				INFOPLIST_FILE = "Feature Flag ObjectiveC/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -298,8 +387,13 @@
 		53AE844B20C6164F007D9421 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/rox/RoxSdk",
+				);
 				INFOPLIST_FILE = "Feature Flag ObjectiveC/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

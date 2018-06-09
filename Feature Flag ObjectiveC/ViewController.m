@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "MyContainer.h"
+#import "AppDelegate.h"
 
 @interface ViewController ()
 
@@ -14,22 +16,37 @@
 
 @implementation ViewController
 
-bool isHoliday = false;
-
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
     
-    if (isHoliday)
-    {
-        _greetingLabel.text = @"Happy Holidays!";
-    }
-    else
-    {
-        _greetingLabel.text = @"Hello, World!";
-    }
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(updateLabels:)
+                                                 name:@"LabelNotification"
+                                               object:nil];
 }
 
+
+- (void) updateLabels:(NSNotification *) notification
+{
+
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+
+        NSLog(@"Value is %@",   appDelegate.myContainer.isNewYear.isEnabled ? @"YES" : @"NO");
+        
+        if (appDelegate.myContainer.isNewYear.isEnabled)
+        {
+            self->_greetingLabel.text = @"Happy Holidays!";
+        }
+        else
+        {
+            self->_greetingLabel.text = @"Hello, World!";
+        }
+    });
+    
+    
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

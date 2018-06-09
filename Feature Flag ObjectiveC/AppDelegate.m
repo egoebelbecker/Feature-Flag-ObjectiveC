@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "MyContainer.h"
+
+#import <RoxCore/RoxCore.h>
 
 @interface AppDelegate ()
 
@@ -14,9 +17,22 @@
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    
+    ROXOptions *options = [[ROXOptions alloc] init];
+    options.onConfigurationFetched = ^(ROXFetcherResult* result){
+        [[NSNotificationCenter defaultCenter]
+         postNotificationName:@"LabelNotification"
+         object:nil];
+    };
+    
+    self.myContainer = [[MyContainer alloc] init];
+    
+    [ROX register:@"Flags" container: self.myContainer];
+    [ROX setupWithKey:@"5b1b19519373e2157eacf1e9" options:options];
+    
     return YES;
 }
 
