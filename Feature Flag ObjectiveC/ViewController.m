@@ -25,27 +25,26 @@
                                                object:nil];
 }
 
-
 - (void) updateLabels:(NSNotification *) notification
 {
 
-    
     dispatch_async(dispatch_get_main_queue(), ^{
         AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
 
-        NSLog(@"Value is %@",   appDelegate.myContainer.isNewYear.isEnabled ? @"YES" : @"NO");
+        NSLog(@"Value is %@ %p", appDelegate.myContainer.isNewYear.isEnabled ? @"YES" : @"NO", appDelegate.myContainer.isNewYear);
         
-        if (appDelegate.myContainer.isNewYear.isEnabled)
-        {
+        self->_greetingLabel.text = appDelegate.myContainer.greetingValue.value;
+        
+        // Below is for using a toggle instead of a config value
+        /*
+        [appDelegate.myContainer.isNewYear enabled:^{
             self->_greetingLabel.text = @"Happy Holidays!";
-        }
-        else
-        {
+        } disabled:^{
             self->_greetingLabel.text = @"Hello, World!";
-        }
+        }];
+         
+         */
     });
-    
-    
 }
 
 - (void)didReceiveMemoryWarning {

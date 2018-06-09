@@ -5,5 +5,6 @@
 @interface MyContainer : ROXBaseContainer
 
 @property (nonatomic) ROXFlag* isNewYear;
+@property (nonatomic) ROXConfigurationString *greetingValue;
 
 @end

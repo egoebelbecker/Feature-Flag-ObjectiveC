@@ -27,6 +27,7 @@
          postNotificationName:@"LabelNotification"
          object:nil];
     };
+    options.verbose = NO;
     
     self.myContainer = [[MyContainer alloc] init];
     
